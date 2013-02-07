@@ -37,7 +37,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Calcs\Caclulator.cs" />
-    <Compile Include="Calcs\Metric.cs" />
+    <Compile Include="Calcs\ImperialCalculator.cs" />
+    <Compile Include="Calcs\MetricCalculator.cs" />
     <Compile Include="Distance.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

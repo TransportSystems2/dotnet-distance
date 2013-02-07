@@ -58,7 +58,7 @@ namespace Tripsis.DotNetDistance.Tests
             const long Millimeters = 12345;
 
             // Act
-            var distance = Distance.FromMilliimeters(Millimeters);
+            var distance = Distance.FromMillimeters(Millimeters);
 
             // Assert
             Assert.IsNotNull(distance);

@@ -26,7 +26,7 @@ namespace Tripsis.DotNetDistance.Calcs
     /// <summary>
     /// Internal class to handle calculations.
     /// </summary>
-    internal abstract class Calculator : Metric
+    internal abstract class Calculator : MetricCalculator
     {
     }
 }

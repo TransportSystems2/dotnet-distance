@@ -111,7 +111,7 @@ namespace Tripsis.DotNetDistance
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>A new <see cref="Distance"/> object.</returns>
-        public static Distance FromMilliimeters(long millimeters)
+        public static Distance FromMillimeters(double millimeters)
         {
             return new Distance(millimeters);
         }
@@ -123,7 +123,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>A new <see cref="Distance"/> object.</returns>
         public static Distance FromCentimeters(double centimeters)
         {
-            var distance = Metric.CentimetersToMillimeters(centimeters);
+            var distance = MetricCalculator.CentimetersToMillimeters(centimeters);
             return new Distance(distance);
         }
 
@@ -134,7 +134,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>A new <see cref="Distance"/> object.</returns>
         public static Distance FromMeters(double meters)
         {
-            var distance = Metric.MetersToMillimetres(meters);
+            var distance = MetricCalculator.MetersToMillimetres(meters);
             return new Distance(distance);
         }
 
@@ -145,7 +145,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>A new <see cref="Distance"/> object.</returns>
         public static Distance FromKilometers(double kilometers)
         {
-            var distance = Metric.KilometersToMillimeters(kilometers);
+            var distance = MetricCalculator.KilometersToMillimeters(kilometers);
             return new Distance(distance);
         }
 
@@ -164,7 +164,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in centimeters.</returns>
         public double ToCentimeters()
         {
-            return Metric.MillimetersToCentimeters(this.millimeters);
+            return MetricCalculator.MillimetersToCentimeters(this.millimeters);
         }
 
         /// <summary>
@@ -173,7 +173,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in meters.</returns>
         public double ToMeters()
         {
-            return Metric.MillimetersToMeters(this.millimeters);
+            return MetricCalculator.MillimetersToMeters(this.millimeters);
         }
 
         /// <summary>
@@ -182,7 +182,178 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in kilometers.</returns>
         public double ToKilometers()
         {
-            return Metric.MillimetersToKilometers(this.millimeters);
+            return MetricCalculator.MillimetersToKilometers(this.millimeters);
+        }
+
+        #endregion
+
+        #region Imperial
+
+        /// <summary>
+        /// Gets a new <see cref="Distance"/> from the distance in <paramref name="thou"/>.
+        /// </summary>
+        /// <param name="thou">The distance in thou.</param>
+        /// <returns>A new <see cref="Distance"/> object.</returns>
+        /// <remarks>1 inch = 1000 thou</remarks>
+        public static Distance FromThou(double thou)
+        {
+            var distance = ImperialCalculator.ThouToMillimeters(thou);
+            return new Distance(distance);
+        }
+
+        /// <summary>
+        /// Gets a new <see cref="Distance"/> from the distance in <paramref name="inches"/>.
+        /// </summary>
+        /// <param name="inches">The distance in inches.</param>
+        /// <returns>A new <see cref="Distance"/> object.</returns>
+        /// <remarks>1 foot = 12 inches</remarks>
+        public static Distance FromInches(double inches)
+        {
+            var distance = ImperialCalculator.InchesToMillimeters(inches);
+            return new Distance(distance);
+        }
+
+        /// <summary>
+        /// Gets a new <see cref="Distance"/> from the distance in <paramref name="feet"/>.
+        /// </summary>
+        /// <param name="feet">The distance in feet.</param>
+        /// <returns>A new <see cref="Distance"/> object.</returns>
+        /// <remarks>1 yard = 3 feet</remarks>
+        public static Distance FromFeet(double feet)
+        {
+            var distance = ImperialCalculator.FeetToMillimeters(feet);
+            return new Distance(distance);
+        }
+
+        /// <summary>
+        /// Gets a new <see cref="Distance"/> from the distance in <paramref name="yards"/>.
+        /// </summary>
+        /// <param name="yards">The distance in yards.</param>
+        /// <returns>A new <see cref="Distance"/> object.</returns>
+        /// <remarks>1 chain = 22 yards</remarks>
+        public static Distance FromYards(double yards)
+        {
+            var distance = ImperialCalculator.YardsToMillimeters(yards);
+            return new Distance(distance);
+        }
+
+        /// <summary>
+        /// Gets a new <see cref="Distance"/> from the distance in <paramref name="chains"/>.
+        /// </summary>
+        /// <param name="chains">The distance in chains.</param>
+        /// <returns>A new <see cref="Distance"/> object.</returns>
+        public static Distance FromChains(double chains)
+        {
+            var distance = ImperialCalculator.ChainsToMillimeters(chains);
+            return new Distance(distance);
+        }
+
+        /// <summary>
+        /// Gets a new <see cref="Distance"/> from the distance in <paramref name="furlongs"/>.
+        /// </summary>
+        /// <param name="furlongs">The distance in furlongs.</param>
+        /// <returns>A new <see cref="Distance"/> object.</returns>
+        /// <remarks>1 furlong = 10 chains</remarks>
+        public static Distance FromFurlongs(double furlongs)
+        {
+            var distance = ImperialCalculator.FurlongsToMillimeters(furlongs);
+            return new Distance(distance);
+        }
+
+        /// <summary>
+        /// Gets a new <see cref="Distance"/> from the distance in <paramref name="miles"/>.
+        /// </summary>
+        /// <param name="miles">The distance in miles.</param>
+        /// <returns>A new <see cref="Distance"/> object.</returns>
+        /// <remarks>1 mile = 8 furlongs</remarks>
+        public static Distance FromMiles(double miles)
+        {
+            var distance = ImperialCalculator.MilesToMillimeters(miles);
+            return new Distance(distance);
+        }
+
+        /// <summary>
+        /// Gets a new <see cref="Distance"/> from the distance in <paramref name="leagues"/>.
+        /// </summary>
+        /// <param name="leagues">The distance in leagues.</param>
+        /// <returns>A new <see cref="Distance"/> object.</returns>
+        /// <remarks>1 league = 3 miles</remarks>
+        public static Distance FromLeagues(double leagues)
+        {
+            var distance = ImperialCalculator.LeaguesToMillimeters(leagues);
+            return new Distance(distance);
+        }
+
+        /// <summary>
+        /// Returns the distance in thou.
+        /// </summary>
+        /// <returns>The distance in thou.</returns>
+        public double ToThou()
+        {
+            return ImperialCalculator.MillimetersToThou(this.millimeters);
+        }
+
+        /// <summary>
+        /// Returns the distance in inches.
+        /// </summary>
+        /// <returns>The distance in inches.</returns>
+        public double ToInches()
+        {
+            return ImperialCalculator.MillimetersToInches(this.millimeters);
+        }
+
+        /// <summary>
+        /// Returns the distance in feet.
+        /// </summary>
+        /// <returns>The distance in feet.</returns>
+        public double ToFeet()
+        {
+            return ImperialCalculator.MillimetersToFeet(this.millimeters);
+        }
+
+        /// <summary>
+        /// Returns the distance in yards.
+        /// </summary>
+        /// <returns>The distance in yards.</returns>
+        public double ToYards()
+        {
+            return ImperialCalculator.MillimetersToYards(this.millimeters);
+        }
+
+        /// <summary>
+        /// Returns the distance in chains.
+        /// </summary>
+        /// <returns>The distance in chains.</returns>
+        public double ToChains()
+        {
+            return ImperialCalculator.MillimetersToChains(this.millimeters);
+        }
+
+        /// <summary>
+        /// Returns the distance in furlongs.
+        /// </summary>
+        /// <returns>The distance in furlongs.</returns>
+        public double ToFurlongs()
+        {
+            return ImperialCalculator.MillimetersToFurlongs(this.millimeters);
+        }
+
+        /// <summary>
+        /// Returns the distance in miles.
+        /// </summary>
+        /// <returns>The distance in miles.</returns>
+        public double ToMiles()
+        {
+            return ImperialCalculator.MillimetersToMiles(this.millimeters);
+        }
+
+        /// <summary>
+        /// Returns the distance in leagues.
+        /// </summary>
+        /// <returns>The distance in leagues.</returns>
+        public double ToLeagues()
+        {
+            return ImperialCalculator.MillimetersToLeagues(this.millimeters);
         }
 
         #endregion

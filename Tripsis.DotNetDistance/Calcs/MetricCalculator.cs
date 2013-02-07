@@ -1,5 +1,5 @@
 ﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="Metric.cs" company="Tripsis">
+// <copyright file="MetricCalculator.cs" company="Tripsis">
 //   Distance object abstraction in .NET 4.
 //   Copyright (C) 2013 Kevin Wilson
 //   
@@ -26,7 +26,7 @@ namespace Tripsis.DotNetDistance.Calcs
     /// <summary>
     /// Internal class to handle metric calculations.
     /// </summary>
-    internal abstract class Metric
+    internal abstract class MetricCalculator
     {
         #region Centimeters
 
