@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tripsis.DotNetDistance", "Tripsis.DotNetDistance\Tripsis.DotNetDistance.csproj", "{AA99FF32-3273-482A-A149-ED4FFFC89BD1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tripsis.DotNetDistance.Tests", "Tripsis.DotNetDistance.Tests\Tripsis.DotNetDistance.Tests.csproj", "{767AB0B2-2E1C-45AC-BFAF-954563EE6350}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA99FF32-3273-482A-A149-ED4FFFC89BD1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA99FF32-3273-482A-A149-ED4FFFC89BD1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA99FF32-3273-482A-A149-ED4FFFC89BD1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA99FF32-3273-482A-A149-ED4FFFC89BD1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{767AB0B2-2E1C-45AC-BFAF-954563EE6350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{767AB0B2-2E1C-45AC-BFAF-954563EE6350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{767AB0B2-2E1C-45AC-BFAF-954563EE6350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{767AB0B2-2E1C-45AC-BFAF-954563EE6350}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
