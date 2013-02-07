@@ -35,9 +35,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="thou">The distance in thou.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static double ThouToMillimeters(double thou)
+        public static decimal ThouToMillimeters(decimal thou)
         {
-            return thou * 0.0254d;
+            return thou * (decimal)0.0254;
         }
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in thou.</returns>
-        public static double MillimetersToThou(double millimeters)
+        public static decimal MillimetersToThou(decimal millimeters)
         {
-            return millimeters / 0.0254d;
+            return millimeters / (decimal)0.0254;
         }
 
         #endregion
@@ -59,9 +59,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="inches">The distance in inches.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static double InchesToMillimeters(double inches)
+        public static decimal InchesToMillimeters(decimal inches)
         {
-            return inches * 25.4d;
+            return inches * (decimal)25.4;
         }
 
         /// <summary>
@@ -69,9 +69,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in inches.</returns>
-        public static double MillimetersToInches(double millimeters)
+        public static decimal MillimetersToInches(decimal millimeters)
         {
-            return millimeters / 25.4d;
+            return millimeters / (decimal)25.4;
         }
 
         #endregion
@@ -83,9 +83,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="feet">The distance in feet.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static double FeetToMillimeters(double feet)
+        public static decimal FeetToMillimeters(decimal feet)
         {
-            return feet * 304.8d;
+            return feet * (decimal)304.8;
         }
 
         /// <summary>
@@ -93,9 +93,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in feet.</returns>
-        public static double MillimetersToFeet(double millimeters)
+        public static decimal MillimetersToFeet(decimal millimeters)
         {
-            return millimeters / 304.8d;
+            return millimeters / (decimal)304.8;
         }
 
         #endregion
@@ -107,9 +107,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="yards">The distance in yards.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static double YardsToMillimeters(double yards)
+        public static decimal YardsToMillimeters(decimal yards)
         {
-            return yards * 914.4d;
+            return yards * (decimal)914.4;
         }
 
         /// <summary>
@@ -117,9 +117,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in yards.</returns>
-        public static double MillimetersToYards(double millimeters)
+        public static decimal MillimetersToYards(decimal millimeters)
         {
-            return millimeters / 914.4d;
+            return millimeters / (decimal)914.4;
         }
 
         #endregion
@@ -131,9 +131,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="chains">The distance in chains.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static double ChainsToMillimeters(double chains)
+        public static decimal ChainsToMillimeters(decimal chains)
         {
-            return chains * 20116.8d;
+            return chains * (decimal)20116.8;
         }
 
         /// <summary>
@@ -141,9 +141,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in chains.</returns>
-        public static double MillimetersToChains(double millimeters)
+        public static decimal MillimetersToChains(decimal millimeters)
         {
-            return millimeters / 20116.8d;
+            return millimeters / (decimal)20116.8;
         }
 
         #endregion
@@ -155,9 +155,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="furlongs">The distance in furlongs.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static double FurlongsToMillimeters(double furlongs)
+        public static decimal FurlongsToMillimeters(decimal furlongs)
         {
-            return furlongs * 201168d;
+            return furlongs * 201168;
         }
 
         /// <summary>
@@ -165,9 +165,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in furlongs.</returns>
-        public static double MillimetersToFurlongs(double millimeters)
+        public static decimal MillimetersToFurlongs(decimal millimeters)
         {
-            return millimeters / 201168d;
+            return millimeters / 201168;
         }
 
         #endregion
@@ -179,9 +179,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="miles">The distance in miles.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static double MilesToMillimeters(double miles)
+        public static decimal MilesToMillimeters(decimal miles)
         {
-            return miles * 1609344d;
+            return miles * 1609344;
         }
 
         /// <summary>
@@ -189,9 +189,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in miles.</returns>
-        public static double MillimetersToMiles(double millimeters)
+        public static decimal MillimetersToMiles(decimal millimeters)
         {
-            return millimeters / 1609344d;
+            return millimeters / 1609344;
         }
 
         #endregion
@@ -203,9 +203,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="leagues">The distance in leagues.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static double LeaguesToMillimeters(double leagues)
+        public static decimal LeaguesToMillimeters(decimal leagues)
         {
-            return leagues * 5556000d;
+            return leagues * 5556000;
         }
 
         /// <summary>
@@ -213,9 +213,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in leagues.</returns>
-        public static double MillimetersToLeagues(double millimeters)
+        public static decimal MillimetersToLeagues(decimal millimeters)
         {
-            return millimeters / 5556000d;
+            return millimeters / 5556000;
         }
 
         #endregion
