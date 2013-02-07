@@ -101,6 +101,8 @@ namespace Tripsis.DotNetDistance.Tests
 
         #endregion
 
+        #region +
+
         /// <summary>
         /// Tests that + adds the distances of two items together.
         /// </summary>
@@ -145,6 +147,10 @@ namespace Tripsis.DotNetDistance.Tests
             Assert.AreEqual(distance1.ToMillimeters(), Total);
         }
 
+        #endregion
+
+        #region -
+
         /// <summary>
         /// Tests that - subtracts one distance from another.
         /// </summary>
@@ -188,5 +194,7 @@ namespace Tripsis.DotNetDistance.Tests
             Assert.IsNotNull(distance2);
             Assert.AreEqual(distance2.ToMillimeters(), Difference);
         }
+
+        #endregion
     }
 }
