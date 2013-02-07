@@ -37,7 +37,7 @@ namespace Tripsis.DotNetDistance
         /// <summary>
         /// Local distance storage in millimeters.
         /// </summary>
-        private readonly long millimeters;
+        private readonly decimal millimeters;
 
         #endregion
 
@@ -47,7 +47,7 @@ namespace Tripsis.DotNetDistance
         /// Initializes a new instance of the <see cref="Distance"/> class.
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
-        public Distance(long millimeters)
+        public Distance(decimal millimeters)
         {
             this.millimeters = millimeters;
         }
@@ -153,7 +153,7 @@ namespace Tripsis.DotNetDistance
         /// Returns the distance in millimeters.
         /// </summary>
         /// <returns>The distance in millimeters.</returns>
-        public long ToMillimeters()
+        public decimal ToMillimeters()
         {
             return this.millimeters;
         }
