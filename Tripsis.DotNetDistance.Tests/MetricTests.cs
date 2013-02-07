@@ -83,6 +83,24 @@ namespace Tripsis.DotNetDistance.Tests
         }
 
         /// <summary>
+        /// Tests that the conversion to centimeters works correctly.
+        /// </summary>
+        [Test]
+        public void ConvertToCentimetersWorksCorrectly()
+        {
+            // Arrange
+            const double Millimeters = 112345;
+            const double Centimeters = 11234.5;
+
+            // Act
+            var distance = new Distance(Millimeters);
+
+            // Assert
+            Assert.IsNotNull(distance);
+            Assert.AreEqual(Centimeters, distance.ToCentimeters());
+        }
+
+        /// <summary>
         /// Tests that meters are returned correctly.
         /// </summary>
         [Test]
@@ -93,6 +111,24 @@ namespace Tripsis.DotNetDistance.Tests
 
             // Act
             var distance = Distance.FromMeters(Meters);
+
+            // Assert
+            Assert.IsNotNull(distance);
+            Assert.AreEqual(Meters, distance.ToMeters());
+        }
+
+        /// <summary>
+        /// Tests that the conversion to meters works correctly.
+        /// </summary>
+        [Test]
+        public void ConvertToMetersWorksCorrectly()
+        {
+            // Arrange
+            const double Millimeters = 112345;
+            const double Meters = 112.345;
+
+            // Act
+            var distance = new Distance(Millimeters);
 
             // Assert
             Assert.IsNotNull(distance);
@@ -114,6 +150,24 @@ namespace Tripsis.DotNetDistance.Tests
             // Assert
             Assert.IsNotNull(distance);
             Assert.AreEqual(Km, distance.ToKilometers());
+        }
+
+        /// <summary>
+        /// Tests that the conversion to kilometers works correctly.
+        /// </summary>
+        [Test]
+        public void ConvertToKilometersWorksCorrectly()
+        {
+            // Arrange
+            const double Millimeters = 112345678;
+            const double Kilometers = 112.345678;
+
+            // Act
+            var distance = new Distance(Millimeters);
+
+            // Assert
+            Assert.IsNotNull(distance);
+            Assert.AreEqual(Kilometers, distance.ToKilometers());
         }
     }
 }

@@ -35,9 +35,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="centimeters">The distance in centimeters.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static decimal CentimetersToMillimeters(double centimeters)
+        public static double CentimetersToMillimeters(double centimeters)
         {
-            return decimal.Multiply(new decimal(centimeters), 10);
+            return centimeters * 10;
         }
 
         /// <summary>
@@ -45,9 +45,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in centimeters.</returns>
-        public static double MillimetersToCentimeters(decimal millimeters)
+        public static double MillimetersToCentimeters(double millimeters)
         {
-            return (double)(millimeters / 10);
+            return millimeters / 10d;
         }
 
         #endregion
@@ -59,9 +59,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="meters">The distance in meters.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static decimal MetersToMillimetres(double meters)
+        public static double MetersToMillimetres(double meters)
         {
-            return decimal.Multiply(new decimal(meters), 1000);
+            return meters * 1000;
         }
 
         /// <summary>
@@ -69,9 +69,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in meters.</returns>
-        public static double MillimetersToMeters(decimal millimeters)
+        public static double MillimetersToMeters(double millimeters)
         {
-            return (double)(millimeters / 1000);
+            return millimeters / 1000d;
         }
 
         #endregion
@@ -83,9 +83,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
         /// <returns>The distance in kilometers.</returns>
-        public static double MillimetersToKilometers(decimal millimeters)
+        public static double MillimetersToKilometers(double millimeters)
         {
-            return (double)(millimeters / 10 / 100 / 1000);
+            return millimeters / 1000000d;
         }
 
         /// <summary>
@@ -93,9 +93,9 @@ namespace Tripsis.DotNetDistance.Calcs
         /// </summary>
         /// <param name="kilometers">The distance in kilometers.</param>
         /// <returns>The distance in millimeters.</returns>
-        public static decimal KilometersToMillimeters(double kilometers)
+        public static double KilometersToMillimeters(double kilometers)
         {
-            return decimal.Multiply(new decimal(kilometers), 10 * 100 * 1000);
+            return kilometers * 10 * 100 * 1000;
         }
 
         #endregion
