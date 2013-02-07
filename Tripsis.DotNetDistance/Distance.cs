@@ -194,7 +194,6 @@ namespace Tripsis.DotNetDistance
         /// </summary>
         /// <param name="thou">The distance in thou.</param>
         /// <returns>A new <see cref="Distance"/> object.</returns>
-        /// <remarks>1 inch = 1000 thou</remarks>
         public static Distance FromThou(double thou)
         {
             var distance = ImperialCalculator.ThouToMillimeters(new decimal(thou));
@@ -206,7 +205,7 @@ namespace Tripsis.DotNetDistance
         /// </summary>
         /// <param name="inches">The distance in inches.</param>
         /// <returns>A new <see cref="Distance"/> object.</returns>
-        /// <remarks>1 foot = 12 inches</remarks>
+        /// <remarks>1 inch = 1000 thou</remarks>
         public static Distance FromInches(double inches)
         {
             var distance = ImperialCalculator.InchesToMillimeters(new decimal(inches));
@@ -218,7 +217,7 @@ namespace Tripsis.DotNetDistance
         /// </summary>
         /// <param name="feet">The distance in feet.</param>
         /// <returns>A new <see cref="Distance"/> object.</returns>
-        /// <remarks>1 yard = 3 feet</remarks>
+        /// <remarks>1 foot = 12 inches</remarks>
         public static Distance FromFeet(double feet)
         {
             var distance = ImperialCalculator.FeetToMillimeters(new decimal(feet));
@@ -230,7 +229,7 @@ namespace Tripsis.DotNetDistance
         /// </summary>
         /// <param name="yards">The distance in yards.</param>
         /// <returns>A new <see cref="Distance"/> object.</returns>
-        /// <remarks>1 chain = 22 yards</remarks>
+        /// <remarks>1 yard = 3 feet</remarks>
         public static Distance FromYards(double yards)
         {
             var distance = ImperialCalculator.YardsToMillimeters(new decimal(yards));
@@ -242,6 +241,7 @@ namespace Tripsis.DotNetDistance
         /// </summary>
         /// <param name="chains">The distance in chains.</param>
         /// <returns>A new <see cref="Distance"/> object.</returns>
+        /// <remarks>1 chain = 22 yards</remarks>
         public static Distance FromChains(double chains)
         {
             var distance = ImperialCalculator.ChainsToMillimeters(new decimal(chains));
