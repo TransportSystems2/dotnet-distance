@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>Tripsis.DistanceModel</id>
+        <version>1.0.0</version>
+        <title>Distance Model</title>
+        <authors>Kevin Wilson</authors>
+        <owners />
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>Provides a model for distance in the same style as TimeSpan does for time.</description>
+        <tags>distance, measurement</tags>
+    </metadata>
+    <files>
+        <file src="Tripsis.DotNetDistance\bin\Release\Tripsis.DotNetDistance.dll" target="lib\net40\Tripsis.DotNetDistance.dll" />
+    </files>
+</package>
