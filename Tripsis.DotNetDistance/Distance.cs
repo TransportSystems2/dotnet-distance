@@ -37,7 +37,7 @@ namespace Tripsis.DotNetDistance
         /// <summary>
         /// Local distance storage in millimeters.
         /// </summary>
-        private readonly double millimeters;
+        private readonly decimal millimeters;
 
         #endregion
 
@@ -47,9 +47,36 @@ namespace Tripsis.DotNetDistance
         /// Initializes a new instance of the <see cref="Distance"/> class.
         /// </summary>
         /// <param name="millimeters">The distance in millimeters.</param>
-        public Distance(double millimeters)
+        public Distance(decimal millimeters)
         {
             this.millimeters = millimeters;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Distance"/> class.
+        /// </summary>
+        /// <param name="millimeters">The distance in millimeters.</param>
+        public Distance(double millimeters)
+        {
+            this.millimeters = new decimal(millimeters);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Distance"/> class.
+        /// </summary>
+        /// <param name="millimeters">The distance in millimeters.</param>
+        public Distance(int millimeters)
+        {
+            this.millimeters = new decimal(millimeters);
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Distance"/> class.
+        /// </summary>
+        /// <param name="millimeters">The distance in millimeters.</param>
+        public Distance(long millimeters)
+        {
+            this.millimeters = new decimal(millimeters);
         }
 
         #endregion
@@ -155,7 +182,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in millimeters.</returns>
         public double ToMillimeters()
         {
-            return this.millimeters;
+            return Convert.ToDouble(this.millimeters);
         }
 
         /// <summary>
@@ -164,7 +191,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in centimeters.</returns>
         public double ToCentimeters()
         {
-            return (double)MetricCalculator.MillimetersToCentimeters(new decimal(this.millimeters));
+            return (double)MetricCalculator.MillimetersToCentimeters(this.millimeters);
         }
 
         /// <summary>
@@ -173,7 +200,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in meters.</returns>
         public double ToMeters()
         {
-            return (double)MetricCalculator.MillimetersToMeters(new decimal(this.millimeters));
+            return (double)MetricCalculator.MillimetersToMeters(this.millimeters);
         }
 
         /// <summary>
@@ -182,7 +209,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in kilometers.</returns>
         public double ToKilometers()
         {
-            return (double)MetricCalculator.MillimetersToKilometers(new decimal(this.millimeters));
+            return (double)MetricCalculator.MillimetersToKilometers(this.millimeters);
         }
 
         #endregion
@@ -290,7 +317,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in thou.</returns>
         public double ToThou()
         {
-            return (double)ImperialCalculator.MillimetersToThou(new decimal(this.millimeters));
+            return (double)ImperialCalculator.MillimetersToThou(this.millimeters);
         }
 
         /// <summary>
@@ -299,7 +326,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in inches.</returns>
         public double ToInches()
         {
-            return (double)ImperialCalculator.MillimetersToInches(new decimal(this.millimeters));
+            return (double)ImperialCalculator.MillimetersToInches(this.millimeters);
         }
 
         /// <summary>
@@ -308,7 +335,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in feet.</returns>
         public double ToFeet()
         {
-            return (double)ImperialCalculator.MillimetersToFeet(new decimal(this.millimeters));
+            return (double)ImperialCalculator.MillimetersToFeet(this.millimeters);
         }
 
         /// <summary>
@@ -317,7 +344,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in yards.</returns>
         public double ToYards()
         {
-            return (double)ImperialCalculator.MillimetersToYards(new decimal(this.millimeters));
+            return (double)ImperialCalculator.MillimetersToYards(this.millimeters);
         }
 
         /// <summary>
@@ -326,7 +353,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in chains.</returns>
         public double ToChains()
         {
-            return (double)ImperialCalculator.MillimetersToChains(new decimal(this.millimeters));
+            return (double)ImperialCalculator.MillimetersToChains(this.millimeters);
         }
 
         /// <summary>
@@ -335,7 +362,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in furlongs.</returns>
         public double ToFurlongs()
         {
-            return (double)ImperialCalculator.MillimetersToFurlongs(new decimal(this.millimeters));
+            return (double)ImperialCalculator.MillimetersToFurlongs(this.millimeters);
         }
 
         /// <summary>
@@ -344,7 +371,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in miles.</returns>
         public double ToMiles()
         {
-            return (double)ImperialCalculator.MillimetersToMiles(new decimal(this.millimeters));
+            return (double)ImperialCalculator.MillimetersToMiles(this.millimeters);
         }
 
         /// <summary>
@@ -353,7 +380,7 @@ namespace Tripsis.DotNetDistance
         /// <returns>The distance in leagues.</returns>
         public double ToLeagues()
         {
-            return (double)ImperialCalculator.MillimetersToLeagues(new decimal(this.millimeters));
+            return (double)ImperialCalculator.MillimetersToLeagues(this.millimeters);
         }
 
         #endregion

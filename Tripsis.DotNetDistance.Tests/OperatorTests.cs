@@ -40,7 +40,7 @@ namespace Tripsis.DotNetDistance.Tests
         public void EqualsReturnsTrueIfItemsAreEqual()
         {
             // Arrange
-            const long Distance = 123;
+            const int Distance = 123;
             var distance1 = new Distance(Distance);
             var distance2 = new Distance(Distance);
 
@@ -55,8 +55,8 @@ namespace Tripsis.DotNetDistance.Tests
         public void EqualsReturnsFalseIfItemsAreNotEqual()
         {
             // Arrange
-            const long Distance1 = 123;
-            const long Distance2 = 321;
+            const int Distance1 = 123;
+            const int Distance2 = 321;
             var distance1 = new Distance(Distance1);
             var distance2 = new Distance(Distance2);
 
