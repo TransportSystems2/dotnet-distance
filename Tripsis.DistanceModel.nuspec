@@ -6,6 +6,7 @@
         <title>Distance Model</title>
         <authors>Kevin Wilson</authors>
         <owners />
+        <projectUrl>https://github.com/kwilson/dotnet-distance</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>Provides a model for distance in the same style as TimeSpan does for time.</description>
         <tags>distance, measurement</tags>
