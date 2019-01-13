@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tripsis.DotNetDistance", "Tripsis.DotNetDistance\Tripsis.DotNetDistance.csproj", "{AA99FF32-3273-482A-A149-ED4FFFC89BD1}"
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetDistance", "DotNetDistance\DotNetDistance.csproj", "{AA99FF32-3273-482A-A149-ED4FFFC89BD1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tripsis.DotNetDistance.Tests", "Tripsis.DotNetDistance.Tests\Tripsis.DotNetDistance.Tests.csproj", "{767AB0B2-2E1C-45AC-BFAF-954563EE6350}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetDistance.Tests", "DotNetDistance.Tests\DotNetDistance.Tests.csproj", "{767AB0B2-2E1C-45AC-BFAF-954563EE6350}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -22,5 +24,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7006E125-4092-4581-9F0A-81DECE94EFFA}
 	EndGlobalSection
 EndGlobal

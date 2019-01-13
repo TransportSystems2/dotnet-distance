@@ -1,30 +1,7 @@
-﻿// --------------------------------------------------------------------------------------------------------------------
-// <copyright file="OperatorTests.cs" company="Tripsis">
-//   Distance object abstraction in .NET 2.
-//   Copyright (C) 2013 Kevin Wilson
-//   
-//   This program is free software: you can redistribute it and/or modify
-//   it under the terms of the GNU General Public License as published by
-//   the Free Software Foundation, either version 3 of the License, or
-//   (at your option) any later version.
-//   
-//   This program is distributed in the hope that it will be useful,
-//   but WITHOUT ANY WARRANTY; without even the implied warranty of
-//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-//   GNU General Public License for more details.
-//   
-//   You should have received a copy of the GNU General Public License
-//   along with this program.  If not, see <http://www.gnu.org/licenses/>.
-// </copyright>
-// <summary>
-//   Tests for operator calculations on <see cref="Distance" /> objects.
-// </summary>
-// --------------------------------------------------------------------------------------------------------------------
+﻿using NUnit.Framework;
 
-namespace Tripsis.DotNetDistance.Tests
+namespace DotNetDistance.Tests
 {
-    using NUnit.Framework;
-
     /// <summary>
     /// Tests for operator calculations on <see cref="Distance"/> objects.
     /// </summary>
@@ -122,7 +99,7 @@ namespace Tripsis.DotNetDistance.Tests
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.ToMillimeters(), Total);
+            Assert.AreEqual(result.ToMeters(), Total);
         }
 
         /// <summary>
@@ -144,7 +121,7 @@ namespace Tripsis.DotNetDistance.Tests
 
             // Assert
             Assert.IsNotNull(distance1);
-            Assert.AreEqual(distance1.ToMillimeters(), Total);
+            Assert.AreEqual(distance1.ToMeters(), Total);
         }
 
         #endregion
@@ -170,7 +147,7 @@ namespace Tripsis.DotNetDistance.Tests
 
             // Assert
             Assert.IsNotNull(result);
-            Assert.AreEqual(result.ToMillimeters(), Difference);
+            Assert.AreEqual(result.ToMeters(), Difference);
         }
 
         /// <summary>
@@ -192,7 +169,55 @@ namespace Tripsis.DotNetDistance.Tests
 
             // Assert
             Assert.IsNotNull(distance2);
-            Assert.AreEqual(distance2.ToMillimeters(), Difference);
+            Assert.AreEqual(distance2.ToMeters(), Difference);
+        }
+
+        #endregion
+
+        #region > <
+
+        [Test]
+        public void CompareReturnsTrueIfFirsItemsIsGreaterThanSecond()
+        {
+            // Arrange
+            var firstDistance = Distance.FromCentimeters(2);
+            var secondDistance = Distance.FromCentimeters(1);
+
+            // Assert
+            Assert.IsTrue(firstDistance > secondDistance);
+        }
+
+        [Test]
+        public void CompareReturnsFalseIfFirstItemsIsNotGreaterThanSecond()
+        {
+            // Arrange
+            var firstDistance = Distance.FromCentimeters(2);
+            var secondDistance = Distance.FromCentimeters(1);
+
+            // Assert
+            Assert.IsFalse(firstDistance < secondDistance);
+        }
+
+        [Test]
+        public void CompareReturnsTrueIfFirsItemsIsGreaterOrEqualSecond()
+        {
+            // Arrange
+            var firstDistance = Distance.FromCentimeters(2);
+            var secondDistance = Distance.FromCentimeters(2);
+
+            // Assert
+            Assert.IsTrue(firstDistance >= secondDistance);
+        }
+
+        [Test]
+        public void CompareReturnsFalseIfFirstItemsIsNotGreaterOrEqualSecond()
+        {
+            // Arrange
+            var firstDistance = Distance.FromCentimeters(2);
+            var secondDistance = Distance.FromCentimeters(3);
+
+            // Assert
+            Assert.IsFalse(firstDistance >= secondDistance);
         }
 
         #endregion

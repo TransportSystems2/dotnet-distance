@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Pavel Fedorov</Authors>
+    <Company>TransportSystems</Company>
+    <PackageId>DotNetDistance</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <SignAssembly>false</SignAssembly>
+    <RepositoryUrl>https://github.com/TransportSystems2/dotnet-distance</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <PackageTags>C#, NetStandart, Distance, Metric, Meters, Kilometers</PackageTags>
+    <Description>.NET object to handle distance.</Description>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <Version>1.0.1</Version>
+  </PropertyGroup>
+</Project>
