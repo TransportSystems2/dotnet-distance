@@ -10,8 +10,8 @@ Available as a [package on NuGet](http://www.nuget.org/packages/Tripsis.Distance
 So you can do things like this:
 
     var distance = Distance.FromMeters(100);
-    var miles = distance.ToMiles();
-    var leagues = distance.ToLeagues();
+    var feet = distance.ToFeet();
+    var yards = distance.ToYards();
     
 Supports operators as well:
 
@@ -19,19 +19,17 @@ Supports operators as well:
     var distance2 = Distance.FromThou(1000);
     var totalMeters = (distance1 + distance2).ToMeters();
     
+    var listOfDistance = new List<Distance> { distance1, distance2 };
+    var totalMeters = listOfDistance.Sum().ToMeters();
+    
 ## Supported Units
 ### Metric
-- Millimeters
 - Centimeters
 - Meters
 - Kilometers
 
 ### Imperial
-- Thou
 - Inches
 - Feet
 - Yards
-- Chains
-- Furlongs
 - Miles
-- Leagues
