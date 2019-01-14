@@ -1,4 +1,6 @@
 ﻿using NUnit.Framework;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace DotNetDistance.Tests
 {
@@ -122,6 +124,22 @@ namespace DotNetDistance.Tests
             // Assert
             Assert.IsNotNull(distance1);
             Assert.AreEqual(distance1.ToMeters(), Total);
+        }
+
+        [Test]
+        public void SumEnumeration()
+        {
+            var distanceOfList = new List<Distance>
+            {
+                Distance.FromMeters(1),
+                Distance.FromMeters(2),
+                Distance.FromMeters(3)
+            };
+
+            var totalDistance = distanceOfList.Sum();
+
+            Assert.IsNotNull(totalDistance);
+            Assert.AreEqual(6, totalDistance.ToMeters());
         }
 
         #endregion
