@@ -3,7 +3,7 @@ dotnet-distance
 
 .NET object to handle distance.
 
-Available as a [package on NuGet](http://www.nuget.org/packages/Tripsis.DistanceModel/).
+Available as a [package on NuGet](https://www.nuget.org/packages/DotNetDistance/).
 
 
 ## Usage
