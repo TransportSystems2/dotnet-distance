@@ -6,18 +6,14 @@ namespace DotNetDistance
     /// <summary>
     /// Entity model for a distance.
     /// </summary>
-    public struct Distance : IComparable, IComparable<Distance>, IEquatable<Distance>
+    public class Distance : IComparable, IComparable<Distance>, IEquatable<Distance>
     {
-        #region Fields
-
-        /// <summary>
-        /// Local distance storage in meters.
-        /// </summary>
-        private readonly double meters;
-
-        #endregion
-
         #region Constructors
+
+        public Distance()
+            : this(0)
+        {
+        }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Distance"/> class.
@@ -25,8 +21,17 @@ namespace DotNetDistance
         /// <param name="meters">The distance in meters.</param>
         public Distance(double meters)
         {
-            this.meters = meters;
+            Meters = meters;
         }
+
+        #endregion
+
+        #region Properties
+
+        /// <summary>
+        /// Local distance storage in meters.
+        /// </summary>
+        public double Meters { get; set; }
 
         #endregion
 
@@ -45,7 +50,7 @@ namespace DotNetDistance
                 return true;
             }
 
-            return left.meters == right.meters;
+            return left.Meters == right.Meters;
         }
 
         /// <summary>
@@ -145,7 +150,7 @@ namespace DotNetDistance
         /// <returns>The distance in meters.</returns>
         public double ToMeters()
         {
-            return meters;
+            return Meters;
         }
 
         /// <summary>
@@ -154,7 +159,7 @@ namespace DotNetDistance
         /// <returns>The distance in centimeters.</returns>
         public double ToCentimeters()
         {
-            return MetricCalculator.MetersToCentimeters(meters);
+            return MetricCalculator.MetersToCentimeters(Meters);
         }
 
         /// <summary>
@@ -163,7 +168,7 @@ namespace DotNetDistance
         /// <returns>The distance in kilometers.</returns>
         public double ToKilometers()
         {
-            return MetricCalculator.MetersToKilometers(meters);
+            return MetricCalculator.MetersToKilometers(Meters);
         }
 
         #endregion
@@ -212,7 +217,7 @@ namespace DotNetDistance
         /// <returns>The distance in inches.</returns>
         public double ToInches()
         {
-            return ImperialCalculator.MetersToInches(meters);
+            return ImperialCalculator.MetersToInches(Meters);
         }
 
         /// <summary>
@@ -221,7 +226,7 @@ namespace DotNetDistance
         /// <returns>The distance in feet.</returns>
         public double ToFeet()
         {
-            return ImperialCalculator.MetersToFeet(meters);
+            return ImperialCalculator.MetersToFeet(Meters);
         }
 
         /// <summary>
@@ -230,7 +235,7 @@ namespace DotNetDistance
         /// <returns>The distance in yards.</returns>
         public double ToYards()
         {
-            return ImperialCalculator.MetersToYards(meters);
+            return ImperialCalculator.MetersToYards(Meters);
         }
         
         #endregion
@@ -272,7 +277,7 @@ namespace DotNetDistance
                 return true;
             }
 
-            return meters == other.meters;
+            return Meters == other.Meters;
         }
 
         /// <summary>
@@ -311,7 +316,7 @@ namespace DotNetDistance
         /// <filterpriority>2</filterpriority>
         public override int GetHashCode()
         {
-            return meters.GetHashCode();
+            return Meters.GetHashCode();
         }
 
         #endregion
@@ -319,7 +324,7 @@ namespace DotNetDistance
         #region Comarable
         public int CompareTo(Distance other)
         {
-            return meters.CompareTo(other.meters);
+            return Meters.CompareTo(other.Meters);
         }
 
         public int CompareTo(object obj)

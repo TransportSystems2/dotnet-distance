@@ -11,7 +11,7 @@
     <PackageTags>C#, NetStandart, Distance, Metric, Meters, Kilometers</PackageTags>
     <Description>.NET object to handle distance.</Description>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <Version>1.0.2</Version>
-    <PackageReleaseNotes>Enumerator Sum Extension has been added.</PackageReleaseNotes>
+    <Version>1.0.4</Version>
+    <PackageReleaseNotes></PackageReleaseNotes>
   </PropertyGroup>
 </Project>
